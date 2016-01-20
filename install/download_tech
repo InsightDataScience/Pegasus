@@ -36,7 +36,7 @@ REDIS_URL=http://download.redis.io/releases/redis-$REDIS_VER.tar.gz
 SPARK_URL=http://apache.osuosl.org/spark/spark-$SPARK_VER/spark-$SPARK_VER-bin-hadoop$SPARK_HADOOP_VER.tgz
 STORM_URL=http://www.us.apache.org/dist/storm/apache-storm-$STORM_VER/apache-storm-$STORM_VER.tar.gz
 TACHYON_URL=http://tachyon-project.org/downloads/files/$TACHYON_VER/tachyon-$TACHYON_VER-bin.tar.gz
-ZOOKEEPER_URL=http://www.us.apache.org/dist/zookeeper/stable/zookeeper-$ZOOKEEPER_VER.tar.gz
+ZOOKEEPER_URL=http://www.us.apache.org/dist/zookeeper/zookeeper-$ZOOKEEPER_VER/zookeeper-$ZOOKEEPER_VER.tar.gz
 
 
 if [ "$#" -ne 1 ]; then
