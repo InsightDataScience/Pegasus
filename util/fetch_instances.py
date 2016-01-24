@@ -1,4 +1,6 @@
 import argparse
+import sys, os
+sys.path.append(os.getcwd())
 from util.boto_util import BotoUtil, remove_cluster_info, write_dns, copy_pem
 
 if __name__ == '__main__':
