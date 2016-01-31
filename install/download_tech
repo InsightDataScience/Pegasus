@@ -50,6 +50,7 @@ TECHNOLOGY_URL=$(eval "echo \$$(echo $TECHNOLOGY | tr [a-z] [A-Z])_URL")
 
 check_folder () {
   if [ -d /usr/local/$TECHNOLOGY ]; then
+    source ~/.profile
     echo "$TECHNOLOGY installed."
   else
     echo "$TECHNOLOGY missing."
