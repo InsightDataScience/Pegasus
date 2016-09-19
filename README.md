@@ -22,7 +22,7 @@ Supported commands:
 * `peg scp <to-local|to-rem|from-local|from-rem> <cluster-name> <node-number> <local-path> <remote-path>` - copy files or folders to and from a specific node in your AWS cluster
 * `peg down <cluster-name>` - terminate a cluster
 * `peg retag <cluster-name> <new-cluster-name>` - retag an existing cluster with a different name
-* `peg start <cluster-name>` - start an existing cluster with on demand instances and put into running mode 
+* `peg start <cluster-name>` - start an existing cluster with on demand instances and put into running mode
 * `peg stop <cluster-name>` - stop and existing cluster with on demand instances and put into stop mode
 * `peg port-forward <cluster-name> <node-number> <local-port>:<remote-port>` - port forward your local port to the remote cluster node's port
 
@@ -49,7 +49,7 @@ This will allow you to programatically interface with your AWS account. There ar
 #### Prerequisites
 * AWS account
 * VPC with DNS Resolution enabled
-* Subnet in VPC 
+* Subnet in VPC
 * Security group accepting all inbound and outbound traffic (recommend locking down ports depending on technologies)
 * AWS Access Key ID and AWS Secret Access Key ID
 
@@ -163,7 +163,7 @@ VPCID		    SGID		GROUP NAME
 vpc-add2e6c3	sg-7cb78418	default
 vpc-c2a496a1	sg-5deed039	default
 ```
-We would choose the `sg-5deed039` in this example, since it is also associated with the VPC that we wish to deploy in. 
+We would choose the `sg-5deed039` in this example, since it is also associated with the VPC that we wish to deploy in.
 
 We can also filter Security Groups down to a specific VPC name `peg aws security-groups <vpc-name>` if there are too many security groups to search through
 ```bash
@@ -260,23 +260,23 @@ $ peg install <cluster-name> <technology>
 ```
 The `technology` tag can be any of the following:
 * alluxio (v1.0.0)
-* cassandra (v3.6)
+* cassandra (v3.7)
 * elasticsearch (v2.3.3)
-* flink (v1.0.0 with hadoop v2.7 and scala v2.10)
+* flink (v1.1.2 with hadoop v2.7 and scala v2.10)
 * hadoop (v2.7.2)
 * hbase (v1.2.1)
 * hive (v1.2.1)
-* kafka (v0.9.0.1 with scala v2.10)
-* kafka-manager (v1.3.0.8)
+* kafka (v0.10.0.0 with scala v2.10)
+* kafka-manager (v1.3.1.8+)
 * kibana (v4.5.1)
 * opscenter
 * pig (v0.15.0)
 * presto (v0.147)
-* redis (v3.0.6)
-* secor (v0.21)
+* redis (v3.2.0)
+* secor (v0.21+)
 * spark (v1.6.1 with hadoop v2.6+)
 * storm (v1.0.1)
-* zeppelin
+* zeppelin (v0.6.1+)
 * zookeeper (v3.4.6)
 
 All environment variables relating to technology folder paths are stored in `~/.profile` such as `HADOOP_HOME`, `SPARK_HOME` and so on.
@@ -326,7 +326,7 @@ $ peg stop <cluster-name>
 ```
 
 # Port forwarding to a node
-Forward your local port to a remote node's port. This is useful if you have any services that can only be accessed through port-forwarding. 
+Forward your local port to a remote node's port. This is useful if you have any services that can only be accessed through port-forwarding.
 ```bash
 $ peg port-forward <cluster-name> <node-number> <local-port>:<remote-port>
 ```
