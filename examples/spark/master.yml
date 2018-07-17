@@ -3,8 +3,8 @@ subnet_id: subnet-3a78835f
 num_instances: 1
 key_name: insight-cluster
 security_group_ids: sg-9206aaf7
-instance_type: m4.large
+instance_type: m3.medium
 tag_name: spark-cluster
-vol_size: 100
+vol_size: 50
 role: master
 use_eips: true
